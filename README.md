@@ -1,4 +1,5 @@
-# Cric (Cytopathalogy)
+# Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology
+
 
 Link to CRIC dataset :- https://database.cric.com.br/classification
 
