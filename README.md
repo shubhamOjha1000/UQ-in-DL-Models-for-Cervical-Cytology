@@ -6,6 +6,14 @@ python Train_val_test_split.py --dataset='path to ur csv label file'
 ```
 
 
+Extract cells from the patches :-
+```
+python Cropping.py --dataset='path to the cell centre coordinates csv file' --img_dir='path to the cric img patches directory' --cell_img_dir='path to cell img directory'
+
+```
+
+
+
 
 Run baseline model
 ```
