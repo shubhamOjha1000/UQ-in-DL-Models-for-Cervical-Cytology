@@ -44,3 +44,4 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the img direc
 ```
 
 
+[MCDropout Graphs.pdf](https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/files/14931590/MCDropout.Graphs.pdf)
