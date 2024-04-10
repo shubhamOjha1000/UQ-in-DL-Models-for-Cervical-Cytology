@@ -6,21 +6,9 @@
 
 Deep Learning (DL) has demonstrated significant promise in digital pathological applications both histopathology and cytopathology. However, the majority of these works primarily concentrate on evaluating the general performance of the models and overlook the crucial requirement for uncertainty which is necessary for real-world clinical application. In this study, we examine the change in predictive performance and the identification of mispredictions through the incorporation of uncertainty estimates for DL-based Cervical cancer classification. Specifically, we evaluate the efficacy of three methods—Monte Carlo(MC) Dropout, Ensemble Methods, and Test Time Augmentation(TTA) using three metrics: variance, entropy, and sample mean uncertainty. The results demonstrate that integrating uncertainty estimates improves the model's predictive capacity in high-confidence regions, while also serving as an indicator for the model's mispredictions in low-confidence regions.
 
-## Installation Guide
-
-To get started:
-```
-git clone https://github.com/rohitgandikota/unified-concept-editing.git
-cd unified-concept-editing
-mkdir models
-pip install -r requirements.txt
-```
-
-## Dataset
+## Dataset Guide
 
 **Center for Recognition and Inspection of Cells (CRIC) Dataset** : [Download Link](https://database.cric.com.br/downloads)
-
-## Experimentation Guide
 
 ### Extract Cells from the Patches 
 - To extract a cell crop size of 100 x 100 centered on the nucleus from the patches.
@@ -39,6 +27,8 @@ python Train_val_test_split.py --dataset='path to your csv label file'
 ```
 python train-scripts/train_erase.py --concepts 'violence, nudity, harm' --device 'cuda:0' --concept_type 'unsafe'
 ```
+
+## Experimentation Guide
 
 ### Run Baseline model
 - To train the baseline model having ResNet50 as a feature extractor
