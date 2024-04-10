@@ -27,10 +27,6 @@ pip install -r requirements.txt
 ```
 python Cropping.py --dataset='path to the cell centre coordinates csv file' --img_dir='path to the cric img patches directory' --cell_img_dir='path to cell img directory'
 ```
-<p align="center">
-<img src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/8d7a8fca-9af9-49a6-a101-351822b723cc " width="900" height="230"><br>
-<b>Distribution of Sample Predictions across Uncertainty Ranges for MC Dropout</b><br>
-</p>
 
 ### Train-Val-Test Split
 - To split the dataset for training, validation and testing purposes
