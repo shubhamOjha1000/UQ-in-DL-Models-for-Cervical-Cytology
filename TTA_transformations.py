@@ -15,11 +15,12 @@ import argparse
 
 
 class CricDataset(Dataset):
-    def __init__(self, img_dir, annotation_file, TTA_number, img_transform = None):
+    def __init__(self, img_dir, annotation_file, TTA_number, img_transform = None, TTA_path = None):
         self.img_dir = img_dir
         self.img_labels = pd.read_csv(annotation_file)
         self.img_transform = img_transform
         self.TTA_number = TTA_number
+        self.TTA_path = TTA_path
         # Define additional transformations
         self.transforms = transform = transforms.Compose([
     transforms.RandomHorizontalFlip(p=0.5),  # Apply horizontal flip with probability 0.5
@@ -41,8 +42,9 @@ class CricDataset(Dataset):
         torch_tensor = torch.tensor(image)
         
         #temp_path = '/scratch/shubham.ojha/TTA/1'
-        os.makedirs(os.path.join('/scratch/shubham.ojha/TTA', str(self.TTA_number)), exist_ok=True)
-        temp_path = os.path.join('/scratch/shubham.ojha/TTA', str(self.TTA_number))
+        os.makedirs(os.path.join(self.TTA_path, str(self.TTA_number)), exist_ok=True)
+        temp_path = os.path.join(self.TTA_path, str(self.TTA_number))
+        
 
         torch.save(torch_tensor, os.path.join(temp_path, str(self.img_labels.iloc[idx, 0]))[:-3] + 'pt')
 
@@ -54,14 +56,17 @@ class CricDataset(Dataset):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--start_idx', default=1, type=int, help='starting index')
-    parser.add_argument('--end_idx', default=1, type=int, help='starting index')
+    parser.add_argument('--end_idx', default=1, type=int, help='ending index')
+    parser.add_argument('--img_dir', default='/path', type=str, help='path to the image directory')
+    parser.add_argument('--dataset', default='/path', type=str, help='path to the label file')
+    parser.add_argument('--TTA_path', default='/path', type=str, help='path for TTA director')
     args = parser.parse_args()
-    img_dir = '/scratch/shubham.ojha/100_nucleus'
-    path = '/scratch/shubham.ojha/binary_labels.csv'
+    img_dir = args.img_dir
+    path = args.dataset
 
     for i in range(args.start_idx, args.end_idx):
         print(i)
-        dataset = CricDataset(img_dir = img_dir, annotation_file = path, TTA_number =  i, img_transform = True)
+        dataset = CricDataset(img_dir = img_dir, annotation_file = path, TTA_number =  i, img_transform = True, TTA_path = args.TTA_path)
         loader = DataLoader(dataset, batch_size = 256, shuffle = False, num_workers = 4)
         for data in loader:
             pass   
