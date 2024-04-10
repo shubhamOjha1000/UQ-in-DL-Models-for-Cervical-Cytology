@@ -4,11 +4,14 @@ split Train-Val-Test
 ```
 python Train_val_test_split.py --dataset='path to ur csv label file' 
 ```
-<img width="631" alt="Screenshot 2024-04-10 at 5 00 39 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/617071f4-d97f-4904-84c1-acbf91e7adf8">
 
 
 
 Extract cells from the patches :-
+
+<img width="631" alt="Screenshot 2024-04-10 at 5 00 39 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/617071f4-d97f-4904-84c1-acbf91e7adf8">
+
+
 ```
 python Cropping.py --dataset='path to the cell centre coordinates csv file' --img_dir='path to the cric img patches directory' --cell_img_dir='path to cell img directory'
 
