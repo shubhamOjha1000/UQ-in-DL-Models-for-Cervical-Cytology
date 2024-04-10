@@ -22,12 +22,6 @@ python Cropping.py --dataset='path to the cell centre coordinates csv file' --im
 python Train_val_test_split.py --dataset='path to your csv label file' 
 ```
 
-### Dataset Augumentation
-- To moderate concepts (e.g. "violence, nudity, harm")
-```
-python train-scripts/train_erase.py --concepts 'violence, nudity, harm' --device 'cuda:0' --concept_type 'unsafe'
-```
-
 ## Experimentation Guide
 
 ### Run Baseline model
@@ -49,6 +43,14 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the img direc
 ```
 
 ### Run Test Time Augumentation (TTA) model 
+- To run 50 augmentations for each image sample
+```
+python TTA_transformations.py --start_idx=1 --end_idx=51 --img_dir='path to the img directory' --dataset='path to the label file' --TTA_path='path for TTA director'
+```
+- To join each sample to create a tensor shape of (50, 3, 224, 224)
+```
+python join_TTA_tensors.py --start_idx=1 --end_idx=11535 --TTA_path='path for TTA director'
+```
 - To train the TTA model
 ```
 python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the joined tensor' --model='TTA_model' --multi_head_loss='avg_across_all_heads_loss'  --batch_size=32 --num_workers=4
@@ -69,6 +71,6 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the joined te
 
 <p align="center">
 <img src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/0298f7e4-b0a0-4e20-80ed-dc325877fc23 " width="900" height="230"><br>
-<b>Distribution of Sample Predictions across Uncertainty Ranges for Test Time Augumentation (TTA)</b><br>
+<b>Distribution of Sample Predictions across Uncertainty Ranges for Test Time Augmentation (TTA)</b><br>
 </p>
 
