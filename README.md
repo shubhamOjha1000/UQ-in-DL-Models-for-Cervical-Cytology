@@ -43,5 +43,6 @@ Run MC Dropout model
 python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the img directory' --model='MC_Dropout_model' --multi_head_loss='avg_across_all_heads_loss'  --batch_size=256
 ```
 
+<img width="887" alt="Screenshot 2024-04-10 at 5 10 55 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/8d7a8fca-9af9-49a6-a101-351822b723cc">
 
-[MCDropout Graphs.pdf](https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/files/14931590/MCDropout.Graphs.pdf)
+
