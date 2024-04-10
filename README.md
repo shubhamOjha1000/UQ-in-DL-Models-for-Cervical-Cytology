@@ -66,7 +66,7 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the joined te
 
 <p align="center">
 <img src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/f8b9312c-e8f8-4261-b97f-d6622ab1a854 " width="900" height="230"><br>
-<b>Distribution of Sample Predictions across Uncertainty Ranges for Ensemble Methods</b><br>
+<b>Distribution of Sample Predictions across Uncertainty Ranges for Ensemble Method</b><br>
 </p>
 
 <p align="center">
