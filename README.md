@@ -46,3 +46,6 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the img direc
 <img width="887" alt="Screenshot 2024-04-10 at 5 10 55 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/8d7a8fca-9af9-49a6-a101-351822b723cc">
 
 
+<img width="786" alt="Screenshot 2024-04-10 at 5 11 58 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/f8b9312c-e8f8-4261-b97f-d6622ab1a854">
+
+<img width="779" alt="Screenshot 2024-04-10 at 5 12 43 PM" src="https://github.com/shubhamOjha1000/Uncertainty-Quantification-in-DL-Models-for-Cervical-Cytology/assets/72977734/0298f7e4-b0a0-4e20-80ed-dc325877fc23">
