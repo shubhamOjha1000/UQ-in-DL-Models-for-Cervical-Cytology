@@ -1,5 +1,4 @@
 # Uncertainty Quantification in DL Models for Cervical Cytology
-###  [Paper Link](https://openreview.net/forum?id=hrTiw1X7yq) || [Code](https://github.com/shubhamOjha1000/UQ-in-DL-Models-for-Cervical-Cytology)
 - #### Authors</ins>: **Shubham Ojha & Aditya Narendra**
 -  #### Venue & Year: Medical Imaging with Deep Learning (MIDL), 2024
 ## Abstract
