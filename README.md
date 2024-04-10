@@ -1,5 +1,7 @@
 # Cric (Cytopathalogy)
 
+Link to CRIC dataset :- https://database.cric.com.br/classification
+
 split Train-Val-Test 
 ```
 python Train_val_test_split.py --dataset='path to ur csv label file' 
