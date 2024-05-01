@@ -44,11 +44,11 @@ python main.py --num_classes=2 --num_epochs=100 --img_dir='path to the img direc
 ### Run Test Time Augumentation (TTA) model 
 - To run 50 augmentations for each image sample
 ```
-python TTA_transformations.py --start_idx=1 --end_idx=51 --img_dir='path to the img directory' --dataset='path to the label file' --TTA_path='path for TTA director'
+python TTA_transformations.py --start_idx=1 --end_idx=51 --img_dir='path to the img directory' --dataset='path to the label file' --TTA_path='path for TTA directory'
 ```
 - To join each sample to create a tensor shape of (50, 3, 224, 224)
 ```
-python join_TTA_tensors.py --start_idx=1 --end_idx=11535 --TTA_path='path for TTA director'
+python join_TTA_tensors.py --start_idx=1 --end_idx=11535 --TTA_path='path for TTA directory'
 ```
 - To train the TTA model
 ```
